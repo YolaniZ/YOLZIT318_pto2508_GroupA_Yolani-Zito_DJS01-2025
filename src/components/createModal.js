@@ -1,11 +1,21 @@
 import { DateUtils } from "../utils/DateUtils.js";
 import { GenreService } from "../utils/GenreService.js";
+import { seasons as seasonData } from "../data.js";
 
 /**
  * Modal controller for podcast details.
  * Handles open/close behavior and renders podcast details into the modal.
  */
 export const createModal = {
+  /**
+   * Retrieves season detail objects for a podcast.
+   * @param {string} podcastId - Podcast id to find season data for.
+   * @returns {{title: string, episodes: number}[]} Season detail objects.
+   */
+  getSeasonDetails(podcastId) {
+    return seasonData.find((item) => item.id === podcastId)?.seasonDetails || [];
+  },
+
   /**
    * Opens the detail modal for a podcast.
    * @param {object} podcast - Podcast data object.
@@ -42,7 +52,24 @@ export const createModal = {
     }
 
     if (seasons) {
-      seasons.textContent = `Seasons: ${podcast.seasons}`;
+      const seasonDetails = createModal.getSeasonDetails(podcast.id);
+      const summary = `Seasons: ${podcast.seasons}`;
+
+      if (seasonDetails.length) {
+        const listItems = seasonDetails
+          .map(
+            (season) =>
+              `<li><strong>${season.title}</strong>: ${season.episodes} episodes</li>`
+          )
+          .join("");
+
+        seasons.innerHTML = `
+          <div class="modal-season-summary">${summary}</div>
+          <ul class="modal-season-list">${listItems}</ul>
+        `;
+      } else {
+        seasons.textContent = summary;
+      }
     }
 
     modal.classList.add("open");
