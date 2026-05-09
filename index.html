@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Podcast App</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="page-width">
+        <h1>Podcast Explorer</h1>
+        <p>Browse the latest shows and open a modal for details.</p>
+      </div>
+    </header>
+
+    <main class="page-width">
+      <section>
+        <h2>Podcast Shows</h2>
+        <div id="podcastGrid" class="podcast-grid"></div>
+      </section>
+    </main>
+
+    <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="modal-wrapper">
+        <button id="closeModal" class="modal-close" aria-label="Close details modal">×</button>
+        <img id="modalImage" class="modal-image" src="" alt="Podcast cover" />
+        <div class="modal-content">
+          <h2 id="modalTitle"></h2>
+          <div id="modalGenres" class="modal-genres"></div>
+          <p id="modalUpdated" class="modal-updated"></p>
+          <p id="modalSeasons" class="modal-seasons"></p>
+          <p id="modalDescription" class="modal-description"></p>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
