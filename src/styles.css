@@ -51,6 +51,38 @@ h2 {
   gap: 20px;
 }
 
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.toolbar-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.toolbar select {
+  min-width: 180px;
+  padding: 11px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+}
+
+.toolbar select:focus {
+  outline: 2px solid rgba(91, 141, 238, 0.6);
+  outline-offset: 2px;
+}
+
 .podcast-card {
   display: flex;
   flex-direction: column;

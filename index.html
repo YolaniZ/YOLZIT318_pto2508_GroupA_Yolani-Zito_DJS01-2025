@@ -17,6 +17,21 @@
     <main class="page-width">
       <section>
         <h2>Podcast Shows</h2>
+        <div class="toolbar">
+          <label class="toolbar-group">
+            <span>Filter by:</span>
+            <select id="genreFilter">
+              <option value="all">All Genres</option>
+            </select>
+          </label>
+          <label class="toolbar-group">
+            <span>Sort by:</span>
+            <select id="sortOrder">
+              <option value="updated">Recently Updated</option>
+              <option value="title">Title A - Z</option>
+            </select>
+          </label>
+        </div>
         <div id="podcastGrid" class="podcast-grid"></div>
       </section>
     </main>
