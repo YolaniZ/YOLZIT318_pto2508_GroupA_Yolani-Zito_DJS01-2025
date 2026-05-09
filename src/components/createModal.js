@@ -1,5 +1,5 @@
-import { DateUtils } from "../DateUtils.js";
-import { GenreService } from "../GenreService.js";
+import { DateUtils } from "../utils/DateUtils.js";
+import { GenreService } from "../utils/GenreService.js";
 
 /**
  * Modal controller for podcast details.

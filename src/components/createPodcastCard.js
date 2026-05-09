@@ -1,5 +1,5 @@
-import { GenreService } from "../GenreService.js";
-import { DateUtils } from "../DateUtils.js";
+import { GenreService } from "../utils/GenreService.js";
+import { DateUtils } from "../utils/DateUtils.js";
 
 /**
  * Creates a podcast card element for the grid.

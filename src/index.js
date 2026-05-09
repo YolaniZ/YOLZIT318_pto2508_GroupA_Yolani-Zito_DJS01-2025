@@ -1,7 +1,7 @@
 import { podcasts } from "./data.js";
 import { createModal } from "./components/createModal.js";
 import { createGrid } from "./views/createGrid.js";
-import { DateUtils } from "./DateUtils.js";
+import { DateUtils } from "./utils/DateUtils.js";
 
 /**
  * Initializes the podcast application.
