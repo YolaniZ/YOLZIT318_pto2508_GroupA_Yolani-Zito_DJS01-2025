@@ -44,7 +44,10 @@ body {
   align-items: center;
   gap: 12px;
   font-weight: 700;
-  font-size: 1rem;
+}
+
+.brand-title {
+  font-size: 1.5rem;
 }
 
 .brand-icon {
@@ -78,17 +81,12 @@ body {
   cursor: pointer;
 }
 
-.avatar {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.avatar-image {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: #5b8dee;
-  color: #ffffff;
-  font-size: 0.85rem;
-  font-weight: 700;
+  object-fit: cover;
+  display: block;
 }
 
 h1,
