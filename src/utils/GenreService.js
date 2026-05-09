@@ -1,4 +1,4 @@
-import { genres } from "./data.js";
+import { genres } from "../data.js";
 
 /**
  * Service to retrieve genre titles from genre IDs.
